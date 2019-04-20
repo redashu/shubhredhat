@@ -1,0 +1,14 @@
+apiVersion: v1  # this is kubeapi server  version 
+kind: Pod       #  kind  of  application 
+metadata:
+ name: firstpod         # name of our pod 
+
+# below information is about  containers 
+
+spec:
+ containers:
+  - name: ashutoshhfirstcont   # this is our container name
+    image: nginx          #  docker image
+    ports:
+     - containerPort: 80   #  nginx web server port 
+    imagePullPolicy: IfNotPresent   #  this is optional 
